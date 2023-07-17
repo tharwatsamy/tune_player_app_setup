@@ -16,7 +16,7 @@ class TuneView extends StatelessWidget {
       body: const Column(
         children: [
           TuneItem(
-            color: Colors.red,
+            color: Color(0xffFE403C),
           ),
           TuneItem(
             color: Colors.orange,
