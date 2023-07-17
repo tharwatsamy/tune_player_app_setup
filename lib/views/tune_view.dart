@@ -12,8 +12,6 @@ class TuneView extends StatelessWidget {
     Color(0xff2F9688),
     Color(0xff2896F3),
     Color(0xff9C27B0),
-    Color(0xff9C27B0),
-    Color(0xffFEEB3B),
   ];
   @override
   Widget build(BuildContext context) {
@@ -25,17 +23,21 @@ class TuneView extends StatelessWidget {
         elevation: 0,
       ),
       body: Column(
-        children: getTuneItems(),
+        children: tuneColors
+            .map(
+              (e) => TuneItem(color: e),
+            )
+            .toList(),
       ),
     );
   }
 
-  List<TuneItem> getTuneItems() {
-    List<TuneItem> items = [];
+  // List<TuneItem> getTuneItems() {
+  //   List<TuneItem> items = [];
 
-    for (var color in tuneColors) {
-      items.add(TuneItem(color: color));
-    }
-    return items;
-  }
+  //   for (var color in tuneColors) {
+  //     items.add(TuneItem(color: color));
+  //   }
+  //   return items;
+  // }
 }
